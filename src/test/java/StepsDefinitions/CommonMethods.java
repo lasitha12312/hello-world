@@ -13,31 +13,23 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import Pages.LoginPage;
 
 public class CommonMethods {
-	public  static WebDriver driver;
-
+	public  static WebDriver driver;	
 	
-	//Open chrome browser and navigating to the system
-	
-	public static void Driverdefinition() throws Throwable {
+	public static void Driverdefinition_open() throws Throwable {
 		System.setProperty("webdriver.chrome.driver",
 			      new File("./src/libs/chromedriver.exe").getCanonicalPath());
 	    driver = new ChromeDriver();
 	    driver.manage().window().maximize();
 	    driver.get("https://dev-sg.smartreservationservices.com/Admin");
-	   Thread.sleep(5000);
-	   
+	   Thread.sleep(5000);	   
 	  
-	}
-	
-	//Quit the browser after finish test
+	}	
+
 	public static void Browserquit() throws Throwable {
 		driver.quit();
 	      
 	  
 	}
-
-
-
 	
 }
 	

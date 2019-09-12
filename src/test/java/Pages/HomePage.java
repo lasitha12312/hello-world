@@ -10,9 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import StepsDefinitions.CommonMethods;
 import junit.framework.Assert;
 
-public class HomePage extends CommonMethods {
-	
-	//Initiating page objects
+public class HomePage extends CommonMethods {	
 		
 	@FindBy(id = "giveFeedback")
 	WebElement Feedbackbutton;
@@ -29,22 +27,15 @@ public class HomePage extends CommonMethods {
 	public HomePage(){
 		
 		PageFactory.initElements(driver, this);
-	}
-	
-	//Clicking on down arrow  
+	}	
+	  
 	public void clickondownarrow(){
 	
 		downarrow.click();
 		
 	}
-	
-	
-	//Clicking on the Logout link
 	public void  ClickonLogout(){
 	
 		logoutbutton.click();
 	}
-	
-	
-
 }
